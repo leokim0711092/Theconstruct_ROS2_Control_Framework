@@ -197,7 +197,7 @@
   <link name="camera_link_optical"></link>
 
 <!-- place your ros2_control XML tags below this line -->
-  <ros2_control name="forward_command_controllers_exercise" type="system">
+  <ros2_control name="trajectory_controllers_exercise" type="system">
 
     <hardware>
       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -239,10 +239,12 @@
       </joint>
   </ros2_control>
 
-  <gazebo>
+  <!-- Gazebo ros2_control plugin -->
+
+    <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
       <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
-      <parameters>$(find rrbot_unit5)/config/forward_command_controller_config.yaml</parameters>
+      <parameters>$(find rrbot_unit5)/config/joint_trajectory_controller_config.yaml</parameters>
     </plugin>
   </gazebo>
 <!-- place your ros2_control XML tags above this line -->
