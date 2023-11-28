@@ -77,4 +77,11 @@ ament_export_dependencies(
   realtime_tools
 )
 
+install(
+  DIRECTORY
+    config
+  DESTINATION
+    share/${PROJECT_NAME}/
+)
+
 ament_package()

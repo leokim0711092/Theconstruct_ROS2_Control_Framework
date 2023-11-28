@@ -226,10 +226,11 @@
   </ros2_control>
 
   <!-- Gazebo's ros2_control plugin -->
+  <!-- Gazebo's ros2_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
       <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
-      <parameters>$(find my_robot_bringup)/config/controller_configuration.yaml</parameters>
+      <parameters>$(find rrbot_controller)/config/rrbot_controllers_custom.yaml</parameters>
     </plugin>
   </gazebo>
   
